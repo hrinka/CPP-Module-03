@@ -6,7 +6,7 @@
 /*   By: hrinka <hrinka@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:05:53 by hrinka            #+#    #+#             */
-/*   Updated: 2024/05/08 18:35:20 by hrinka           ###   ########.fr       */
+/*   Updated: 2024/05/09 18:41:20 by hrinka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,27 @@
 
 int main(void)
 {
-    ClapTrap claptrap("karim");
+	ClapTrap claptrap("Crappy");
 	std::cout << "____________________________\n" << std::endl;
-	ScavTrap scavtrap("scavtrap");
+	ScavTrap Scavtrap("Scavvy");
 	std::cout << "____________________________\n" << std::endl;
-	FragTrap fragtrap("fragtrap");
+	FragTrap fragtrap("Fraggy");
 	std::cout << "____________________________\n" << std::endl;
-	DiamondTrap diamoundtap("diamond");
-	std::cout << "____________________________\n" << std::endl;
-	claptrap.attack("Enemy1");
-	claptrap.takeDamage(6);
-	claptrap.beRepaired(5);
-    std::cout << "____________________________\n" << std::endl;
-	claptrap.attack("Enemy2");
-	claptrap.takeDamage(15);
-	claptrap.beRepaired(9);
-	std::cout << "____________________________\n" << std::endl;
-	scavtrap.attack("Enemy3");
-	scavtrap.takeDamage(14);
-	scavtrap.guardGate();
+	DiamondTrap diamondtrap("Diamond");
 	std::cout << "____________________________\n" << std::endl;
 	fragtrap.attack("Enemy4");
 	fragtrap.takeDamage(11);
 	fragtrap.highFivesGuys();
+	diamondtrap.whoAmI();
+	diamondtrap.takeDamage(20);
+    diamondtrap.beRepaired(10);
+	diamondtrap.attack("Enemy2");
+    diamondtrap.takeDamage(30);
+    diamondtrap.beRepaired(15);
+	diamondtrap.takeDamage(100);
 	std::cout << "____________________________\n" << std::endl;
-	diamoundtap.whoAmI();
+	diamondtrap.whoAmI();
 	std::cout << "____________________________\n" << std::endl;
 
-    return 0;
+	return 0;
 }

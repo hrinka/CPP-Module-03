@@ -6,7 +6,7 @@
 /*   By: hrinka <hrinka@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:33:28 by hrinka            #+#    #+#             */
-/*   Updated: 2024/05/08 19:55:48 by hrinka           ###   ########.fr       */
+/*   Updated: 2024/05/09 18:09:57 by hrinka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), Scav
     this->hitPoints = 100;
     this->energyPoints = 50;
     this->attackDamage = 30;
-    std::cout << "This is the constructer param DiamondTrap" << std::endl;
+    std::cout << "This is the constructer param \x1b[31mDiamondTrap\x1b[0m" << std::endl;
 }
 
 DiamondTrap::~DiamondTrap()
 {
-    std::cout << "This is the deconstructer DiamondTrap" << std::endl;
+    std::cout << "This is the deconstructer \x1b[31mDiamondTrap\x1b[0m" << std::endl;
 }
 DiamondTrap::DiamondTrap()
 {
@@ -31,14 +31,14 @@ DiamondTrap::DiamondTrap()
     this->hitPoints = 100;
     this->energyPoints = 50;
     this->attackDamage = 30;
-    std::cout << "This is default constructer DiamondTrap" << std::endl;
+    std::cout << "This is default constructer \x1b[31mDiamondTrap\x1b[0m" << std::endl;
 }
 DiamondTrap::DiamondTrap(const DiamondTrap& copy) : ClapTrap(copy.name + "_clap_name"), ScavTrap(copy.name), FragTrap(copy.name)
 {
     this->hitPoints = copy.hitPoints;
     this->energyPoints = copy.energyPoints;
     this->attackDamage = copy.attackDamage;
-    std::cout << "This is the copy constructer diamontrap" << std::endl;
+    std::cout << "This is the copy constructer \x1b[31mDiamondTrap\x1b[0m" << std::endl;
 }
 
 
@@ -48,12 +48,12 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap &copy)
     this->hitPoints = copy.hitPoints;
     this->energyPoints = copy.energyPoints;
     this->attackDamage = copy.attackDamage;
-    std::cout << "This is the copy asignment operator diamontrap" << std::endl;
+    std::cout << "This is the copy asignment operator \x1b[31mDiamondTrap\x1b[0m" << std::endl;
     return *this;
 }
 void    DiamondTrap::whoAmI()
 {
-    std::cout << "call whoAmI from diamondTrap" << std::endl;
-    std::cout << "DiamonTrap " << this->name << std::endl;
-    std::cout << "ClapTrap" << ClapTrap::name << std::endl;
+    std::cout << "call whoAmI from \x1b[31mDiamondTrap\x1b[0m" << std::endl;
+    std::cout << "\x1b[31mDiamondTrap\x1b[0m " << this->name << std::endl;
+    std::cout << "\x1b[34mClapTrap\x1b[0m " << ClapTrap::name << std::endl;
 }

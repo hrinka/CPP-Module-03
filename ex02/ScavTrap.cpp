@@ -6,7 +6,7 @@
 /*   By: hrinka <hrinka@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:04:32 by hrinka            #+#    #+#             */
-/*   Updated: 2024/05/08 18:04:46 by hrinka           ###   ########.fr       */
+/*   Updated: 2024/05/09 17:57:18 by hrinka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	this->energyPoints = 50;
 	this->attackDamage = 20;
 	this->name = name;
-	std::cout << "i am from scavTrap consturcter\n";
+	std::cout << "i am from ScavTrap consturcter\n";
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "i am from scavTrap descructer\n";
+	std::cout << "i am from ScavTrap descructer\n";
 };
 
 ScavTrap::ScavTrap()
@@ -31,8 +31,8 @@ ScavTrap::ScavTrap()
 	this->hitPoints = 100;
 	this->energyPoints = 50;
 	this->attackDamage = 20;
-	this->name = "scavtrap";
-	std::cout << "default constructer scavtrap" << std::endl;
+	this->name = "Scavtrap";
+	std::cout << "default constructer Scavtrap" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &copy): ClapTrap(copy.name)
@@ -50,7 +50,7 @@ ScavTrap&   ScavTrap::operator=(const ScavTrap &copy)
 	this->hitPoints = copy.hitPoints;
 	this->energyPoints = copy.energyPoints;
 	this->attackDamage = copy.attackDamage;
-	std::cout << "The assignment operator = scavtrap" << std::endl;
+	std::cout << "The assignment operator = Scavtrap" << std::endl;
 	return *this;
 }
 
@@ -68,5 +68,5 @@ void ScavTrap::attack(const std::string& target)
 			std::cout << this->attackDamage << " points of damage!" << std::endl;
 		}
 		else
-			std::cout << "ScavTrap " << this->name << " can not attack because he dosen't have hit point or energy points\n";
+			std::cout << "ScavTrap " << this->name << " can not attack because he dosen't have hit point or energyPoints\n";
 }

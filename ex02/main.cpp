@@ -6,7 +6,7 @@
 /*   By: hrinka <hrinka@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:05:53 by hrinka            #+#    #+#             */
-/*   Updated: 2024/05/08 18:07:51 by hrinka           ###   ########.fr       */
+/*   Updated: 2024/05/09 17:57:18 by hrinka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main(void)
 {
     ClapTrap claptrap("karim");
 	std::cout << "_____________________\n" << std::endl;
-	ScavTrap scavtrap("scavtrap");
+	ScavTrap Scavtrap("Scavtrap");
 	std::cout << "_____________________\n" << std::endl;
 	FragTrap fragtrap("fragtrap");
 	std::cout << "_____________________\n" << std::endl;
@@ -29,9 +29,9 @@ int main(void)
 	claptrap.takeDamage(13);
 	claptrap.beRepaired(9);
 	std::cout << "_____________________\n" << std::endl;
-	scavtrap.attack("Enemy3");
-	scavtrap.takeDamage(14);
-	scavtrap.guardGate();
+	Scavtrap.attack("Enemy3");
+	Scavtrap.takeDamage(14);
+	Scavtrap.guardGate();
 	std::cout << "_____________________\n" << std::endl;
 	fragtrap.attack("Enemy4");
 	fragtrap.takeDamage(9);
